@@ -15,15 +15,16 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+import { getSessionParameter, resetAuthenticatedSession } from "./session";
+import { CONFIG } from "../config";
 
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-        "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
+/**
+ * Logs out from the session.
+ */
+export const dispatchLogout = () => {
+    const token = getSessionParameter("ID_TOKEN");
+    // Clear the session storage
+    resetAuthenticatedSession();
+    window.location.href = `${CONFIG.LOGOUT_URL}?id_token_hint=${token}&post_logout_redirect_uri=${CONFIG.REDIRECT_URI}`;
+    // window.location.href = "/login";
+};
