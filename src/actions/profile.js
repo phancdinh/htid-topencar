@@ -19,13 +19,13 @@ export async function generateToken() {
     }
 }
 
-export async function fetchUserProfile(accessToken, apimAccesstoken) {
+export async function fetchUserProfile(username, accessToken, apimAccesstoken) {
     if (!accessToken || !apimAccesstoken) {
         return;
     }
 
     try {
-        const { data: profile } = await axios.get(`${CONFIG.APIM_URL}/user-profile/1.0.0`, {
+        const { data: profile } = await axios.get(`${CONFIG.APIM_URL}/user-profile/1.0.0/${username}`, {
             headers: {
                 Authorization: `Bearer ${accessToken}`,
                 "X-HT-APIM-Authorization": `Bearer ${apimAccesstoken}`,

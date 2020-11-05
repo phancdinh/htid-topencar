@@ -41,13 +41,15 @@ export default function Home() {
                 expires_in: parseInt(session.EXPIRES_IN),
             };
 
+            const idToken = decodeIdToken(session.ID_TOKEN);
+
             setState({
+                idToken,
                 tokenResponse: _tokenResponse,
-                idToken: decodeIdToken(session.ID_TOKEN),
                 isLoggedIn: true,
             });
 
-            fetchUserProfile(session.ACCESS_TOKEN);
+            fetchUserProfile(idToken.sub, session.ACCESS_TOKEN);
         } else {
             handleRequestToken();
         }
@@ -85,9 +87,9 @@ export default function Home() {
         }
     }
 
-    async function fetchUserProfile(accessToken) {
+    async function fetchUserProfile(username, accessToken) {
         const apimAccessToken = await generateToken();
-        const profile = await fetchUserProfileApi(accessToken, apimAccessToken);
+        const profile = await fetchUserProfileApi(username, accessToken, apimAccessToken);
         if (profile) {
             setProfile(profile);
         }
