@@ -25,12 +25,15 @@ export async function fetchUserProfile(username, accessToken, apimAccesstoken) {
     }
 
     try {
-        const { data: profile } = await axios.get(`${CONFIG.APIM_URL}/user-profile/1.0.0/${username}`, {
-            headers: {
-                Authorization: `Bearer ${accessToken}`,
-                "X-HT-APIM-Authorization": `Bearer ${apimAccesstoken}`,
+        const { data: profile } = await axios.get(
+            `${CONFIG.APIM_URL}/user-profile-dev/1.0.0/api/profiles/${username}`,
+            {
+                headers: {
+                    Authorization: `Bearer ${accessToken}`,
+                    "X-HT-APIM-Authorization": `Bearer ${apimAccesstoken}`,
+                },
             },
-        });
+        );
         return profile;
     } catch (error) {
         console.log(error);
