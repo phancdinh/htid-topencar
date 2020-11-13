@@ -105,7 +105,7 @@ export default function Home() {
 
     return (
         <div className="container home-container">
-            <h1 className="ht-id">HT ID - Single Page App Demo</h1>
+            <h1 className="ht-id">HT ID - Single Page App Demo - 2</h1>
             <br />
             {state.isLoggedIn ? (
                 <>

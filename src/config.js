@@ -11,12 +11,12 @@ export const CONFIG = {
     LOGOUT_URL: `${HOST}/oidc/logout`,
     RESPONSE_TYPE: "code",
     SCOPE: "openid profile phone",
-    REDIRECT_URI: "https://ht-id-spa-demo.herokuapp.com",
+    REDIRECT_URI: "https://ht-id-spa-demo-2.herokuapp.com",
 
     // id of 'Demo - SPA' Service Provider
-    CLIENT_ID: "C7Uj0Civ7kH6S85tEzbKxttBj_oa",
+    CLIENT_ID: "SHJOYf41jGi6zHFbvxpdg4Fcpgwa",
     // secret of 'Demo - SPA' Service Provider
-    CLIENT_SECRET: "vwUXB7scqHfbDXUH5f1WqlfwJcQa",
+    CLIENT_SECRET: "sUVqTZG3nfrPEDH63h84UYhAaW4a",
 
     GRANT_TYPE: "authorization_code",
     CLIENT_URL: `https://localhost:9000`,
