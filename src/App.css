@@ -70,6 +70,22 @@
     }
 }
 
-.ht-id {
+.ht-id,
+.welcome {
     color: coral;
+}
+
+html body {
+    height: 100%;
+    background-image: url("img/tong_quan.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("img/logo.png");
+    width: 200px;
+    height: 156px;
 }

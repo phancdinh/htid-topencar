@@ -49,7 +49,7 @@ export default function Home() {
                 isLoggedIn: true,
             });
 
-            fetchUserProfile(idToken.sub, session.ACCESS_TOKEN);
+            fetchUserProfile(idToken.ht_id, session.ACCESS_TOKEN);
         } else {
             handleRequestToken();
         }
@@ -87,9 +87,9 @@ export default function Home() {
         }
     }
 
-    async function fetchUserProfile(username, accessToken) {
+    async function fetchUserProfile(ht_id, accessToken) {
         const apimAccessToken = await generateToken();
-        const profile = await fetchUserProfileApi(username, accessToken, apimAccessToken);
+        const profile = await fetchUserProfileApi(ht_id, accessToken, apimAccessToken);
         if (profile) {
             setProfile(profile);
         }
@@ -99,44 +99,44 @@ export default function Home() {
         sendAuthorizationRequest(pkcePair.current.codeChallenge);
     }
 
+    function handleSignUpBtnClick() {
+        window.open("https://app-profile-dev.hungthinhcorp.com.vn/account/register", "_blank");
+    }
+
     function handleLogoutBtnClick() {
         dispatchLogout();
     }
 
     return (
-        <div className="container home-container">
-            <h1 className="ht-id">HT ID - Single Page App Demo</h1>
+        <div className="home-container">
+            <div className="logo"></div>
+            {/*<h1 className="ht-id">Hồ Tràm Complex</h1>*/}
             <br />
             {state.isLoggedIn ? (
                 <>
                     <br />
-                    <h2>Token Response</h2>
-                    <div className="card access-request-block">
-                        <ReactJson src={state.tokenResponse} collapseStringsAfterLength={50} />
-                    </div>
-                    <br />
-                    <h2>ID Token</h2>
-                    <div className="card token-request-block">
-                        <ReactJson src={state.idToken} collapseStringsAfterLength={50} />
-                    </div>
+                    <h2 className={"welcome"}>Chúc mừng đăng nhập thành công</h2>
                     <br />
                     {profile && (
                         <>
-                            <h2>Profile</h2>
-                            <div className="card token-request-block">
-                                <ReactJson src={profile} collapseStringsAfterLength={50} />
-                            </div>
+                            <h2>Xin chào, {profile.full_name}</h2>
+                            <h3>HungThinh Id của bạn là {profile.ht_id}</h3>
                             <br />
                         </>
                     )}
                     <button className="btn btn-danger" onClick={handleLogoutBtnClick}>
-                        LOGOUT
+                        Đăng Xuất
                     </button>
                 </>
             ) : (
-                <button className="btn btn-primary" onClick={handleLoginBtnClick}>
-                    LOGIN
-                </button>
+                <>
+                    <button className="btn btn-primary float-right" onClick={handleLoginBtnClick}>
+                        Đăng Nhập
+                    </button>
+                    <button className="btn btn-primary float-right mr-2" onClick={handleSignUpBtnClick}>
+                        Đăng Ký
+                    </button>
+                </>
             )}
         </div>
     );
