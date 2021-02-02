@@ -19,7 +19,7 @@ export const CONFIG = {
     CLIENT_SECRET: "XsBHLe6jkmxwVAa26b1UsF2O3k8a",
 
     GRANT_TYPE: "authorization_code",
-    CLIENT_URL: `https://localhost:9000`,
+    CLIENT_URL: `https://topen-land.herokuapp.com`,
     COOKIE_PATH: "/",
 
     // endpoint of User Profile service
