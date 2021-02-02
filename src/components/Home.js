@@ -109,24 +109,75 @@ export default function Home() {
 
     return (
         <div className="home-container">
-            <div className="logo"></div>
             {/*<h1 className="ht-id">Hồ Tràm Complex</h1>*/}
             <br />
             {state.isLoggedIn ? (
                 <>
-                    <br />
-                    <h2 className={"welcome"}>Chúc mừng đăng nhập thành công</h2>
-                    <br />
+                    <div className="profile-menu">
+                        {profile && (
+                            <span className="">
+                                <span>{profile.full_name}, </span>
+                                <span>HungThinh Id của bạn là {profile.ht_id} </span>
+                            </span>
+                        )}
+                        <button className="btn btn-danger" onClick={handleLogoutBtnClick}>
+                            Đăng Xuất
+                        </button>
+                    </div>
                     {profile && (
-                        <>
-                            <h2>Xin chào, {profile.full_name}</h2>
-                            <h3>HungThinh Id của bạn là {profile.ht_id}</h3>
-                            <br />
-                        </>
+                        <div className="container main-contain">
+                            <div className="row">
+                                <div className="col-4 mb-5 item-ht">
+                                    <a href="#">
+                                        <img
+                                            className="img-fluid"
+                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13.jpg"
+                                        />
+                                    </a>
+                                    <div className="text-center pt-4">
+                                        <h5>Xe 5 chỗ</h5>
+                                        <p>
+                                            <span className="mr-1">
+                                                <strong>Chỉ từ 500 triệu</strong>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="col-4 mb-5 item-ht">
+                                    <a href="#">
+                                        <img
+                                            className="img-fluid"
+                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13.jpg"
+                                        />
+                                    </a>
+                                    <div className="text-center pt-4">
+                                        <h5>Xe 7 chỗ</h5>
+                                        <p>
+                                            <span className="mr-1">
+                                                <strong>Chỉ từ 1,2 tỷ</strong>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="col-4 mb-5 item-ht">
+                                    <a href="#">
+                                        <img
+                                            className="img-fluid"
+                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13.jpg"
+                                        />
+                                    </a>
+                                    <div className="text-center pt-4">
+                                        <h5>Siêu xe</h5>
+                                        <p>
+                                            <span className="mr-1">
+                                                <strong>Chỉ từ 10tỷ</strong>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     )}
-                    <button className="btn btn-danger" onClick={handleLogoutBtnClick}>
-                        Đăng Xuất
-                    </button>
                 </>
             ) : (
                 <>

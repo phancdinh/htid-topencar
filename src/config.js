@@ -11,15 +11,15 @@ export const CONFIG = {
     LOGOUT_URL: `${HOST}/oidc/logout`,
     RESPONSE_TYPE: "code",
     SCOPE: "openid profile phone",
-    REDIRECT_URI: "https://topen-land.herokuapp.com",
+    REDIRECT_URI: "https://topen-car.herokuapp.com",
 
     // id of 'Demo - SPA' Service Provider
-    CLIENT_ID: "zdORF98685rRNiCuMUz_k_1ff70a",
+    CLIENT_ID: "djJZinXs_OeJ9j5R7ETec4KFLGMa",
     // secret of 'Demo - SPA' Service Provider
-    CLIENT_SECRET: "XsBHLe6jkmxwVAa26b1UsF2O3k8a",
+    CLIENT_SECRET: "pWVTzZStieMoLBfRFFqLMUhzhEIa",
 
     GRANT_TYPE: "authorization_code",
-    CLIENT_URL: `https://localhost:9000`,
+    CLIENT_URL: `https://localhost:8000`,
     COOKIE_PATH: "/",
 
     // endpoint of User Profile service
