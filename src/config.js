@@ -31,3 +31,9 @@ export const CONFIG = {
     // consumer secret of API subscription on devportal
     APIM_SECRET: "NFZvypAiDQWkBrVjbNScKD8OM1wa",
 };
+
+export const FINTECH_CONFIG = {
+    REDIRECT_URI: "https://topen-fintech.herokuapp.com",
+    CLIENT_ID: "BWIItvzyes_2FFnQCtQkjspAtvQa",
+    CLIENT_SECRET: "E0jRK6tgeaRdbYMKc5oSUN7AtPYa",
+};
