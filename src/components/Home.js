@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from "react";
-import ReactJson from "react-json-view";
 import { sendAuthorizationRequest, sendTokenRequest } from "../actions/sign-in";
 import { dispatchLogout } from "../actions/sign-out";
 import {
@@ -10,6 +9,9 @@ import {
     setCodeVerifier,
 } from "../actions/session";
 import getPKCE from "../actions/pkce";
+import { FINTECH_CONFIG, CONFIG } from "../config";
+import car1 from "../img/car1.jpg";
+
 import { fetchUserProfile as fetchUserProfileApi, generateToken } from "../actions/profile";
 
 export default function Home() {
@@ -106,6 +108,7 @@ export default function Home() {
     function handleLogoutBtnClick() {
         dispatchLogout();
     }
+    const fintechUrl = `${CONFIG.AUTHORIZE_ENDPOINT}?response_type=${CONFIG.RESPONSE_TYPE}&scope=${CONFIG.SCOPE}&redirect_uri=${FINTECH_CONFIG.REDIRECT_URI}&client_id=${FINTECH_CONFIG.CLIENT_ID}`;
 
     return (
         <div className="home-container">
@@ -129,10 +132,7 @@ export default function Home() {
                             <div className="row">
                                 <div className="col-4 mb-5 item-ht">
                                     <a href="#">
-                                        <img
-                                            className="img-fluid"
-                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13.jpg"
-                                        />
+                                        <img className="img-fluid" src={car1} />
                                     </a>
                                     <div className="text-center pt-4">
                                         <h5>Xe 5 chỗ</h5>
@@ -145,10 +145,7 @@ export default function Home() {
                                 </div>
                                 <div className="col-4 mb-5 item-ht">
                                     <a href="#">
-                                        <img
-                                            className="img-fluid"
-                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13.jpg"
-                                        />
+                                        <img className="img-fluid" src={car1} />
                                     </a>
                                     <div className="text-center pt-4">
                                         <h5>Xe 7 chỗ</h5>
@@ -161,10 +158,7 @@ export default function Home() {
                                 </div>
                                 <div className="col-4 mb-5 item-ht">
                                     <a href="#">
-                                        <img
-                                            className="img-fluid"
-                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13.jpg"
-                                        />
+                                        <img className="img-fluid" src={car1} />
                                     </a>
                                     <div className="text-center pt-4">
                                         <h5>Siêu xe</h5>
@@ -189,6 +183,49 @@ export default function Home() {
                     </button>
                 </>
             )}
+            <div className="container main-contain">
+                <div className="row">
+                    <div className="col-4 mb-5 item-ht">
+                        <a href="#">
+                            <img className="img-fluid" src={car1} />
+                        </a>
+                        <div className="text-center pt-4">
+                            <h5>Xe 5 chỗ</h5>
+                            <p>
+                                <span className="mr-1">
+                                    <strong>Chỉ từ 500 triệu</strong>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div className="col-4 mb-5 item-ht">
+                        <a href="#">
+                            <img className="img-fluid" src={car1} />
+                        </a>
+                        <div className="text-center pt-4">
+                            <h5>Xe 7 chỗ</h5>
+                            <p>
+                                <span className="mr-1">
+                                    <strong>Chỉ từ 1,2 tỷ</strong>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div className="col-4 mb-5 item-ht">
+                        <a href="#">
+                            <img className="img-fluid" src={car1} />
+                        </a>
+                        <div className="text-center pt-4">
+                            <h5>Siêu xe</h5>
+                            <p>
+                                <span className="mr-1">
+                                    <strong>Chỉ từ 10tỷ</strong>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
