@@ -11,6 +11,8 @@ import {
 import getPKCE from "../actions/pkce";
 import { FINTECH_CONFIG, CONFIG } from "../config";
 import car1 from "../img/car1.jpg";
+import car2 from "../img/car2.jpg";
+import car3 from "../img/car3.jpg";
 
 import { fetchUserProfile as fetchUserProfileApi, generateToken } from "../actions/profile";
 
@@ -131,67 +133,79 @@ export default function Home() {
                         <div className="container main-contain">
                             <div className="row">
                                 <div className="col-4 mb-5 item-ht">
-                                    <a href="#">
-                                        <img className="img-fluid" src={car1} />
-                                    </a>
-                                    <a
-                                        href={fintechUrl}
-                                        className="text-white go-to-fintech-btn"
-                                        target="_blank"
-                                        title="fintect-check"
-                                    >
-                                        Vay
-                                    </a>
+                                    <div>
+                                        <div className="img-wrap">
+                                            <a href="#">
+                                                <img className="img-fluid" src={car1} />
+                                            </a>
+                                        </div>
+                                        <a
+                                            href={fintechUrl}
+                                            className="text-white go-to-fintech-btn"
+                                            target="_blank"
+                                            title="fintect-check"
+                                        >
+                                            Vay
+                                        </a>
 
-                                    <div className="text-center pt-4">
-                                        <h5>Xe 5 chỗ</h5>
-                                        <p>
-                                            <span className="mr-1">
-                                                <strong>Chỉ từ 500 triệu</strong>
-                                            </span>
-                                        </p>
+                                        <div className="text-center pt-4">
+                                            <h5>Xe 5 chỗ</h5>
+                                            <p>
+                                                <span className="mr-1">
+                                                    <strong>Chỉ từ 500 triệu</strong>
+                                                </span>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="col-4 mb-5 item-ht">
-                                    <a href="#">
-                                        <img className="img-fluid" src={car1} />
-                                    </a>
-                                    <a
-                                        href={fintechUrl}
-                                        className="text-white go-to-fintech-btn"
-                                        target="_blank"
-                                        title="fintect-check"
-                                    >
-                                        Vay
-                                    </a>
-                                    <div className="text-center pt-4">
-                                        <h5>Xe 7 chỗ</h5>
-                                        <p>
-                                            <span className="mr-1">
-                                                <strong>Chỉ từ 1,2 tỷ</strong>
-                                            </span>
-                                        </p>
+                                    <div>
+                                        <div className="img-wrap">
+                                            <a href="#">
+                                                <img className="img-fluid" src={car2} />
+                                            </a>
+                                        </div>
+                                        <a
+                                            href={fintechUrl}
+                                            className="text-white go-to-fintech-btn"
+                                            target="_blank"
+                                            title="fintect-check"
+                                        >
+                                            Vay
+                                        </a>
+                                        <div className="text-center pt-4">
+                                            <h5>Xe 7 chỗ</h5>
+                                            <p>
+                                                <span className="mr-1">
+                                                    <strong>Chỉ từ 1,2 tỷ</strong>
+                                                </span>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="col-4 mb-5 item-ht">
-                                    <a href="#">
-                                        <img className="img-fluid" src={car1} />
-                                    </a>
-                                    <a
-                                        href={fintechUrl}
-                                        className="text-white go-to-fintech-btn"
-                                        target="_blank"
-                                        title="fintect-check"
-                                    >
-                                        Vay
-                                    </a>
-                                    <div className="text-center pt-4">
-                                        <h5>Siêu xe</h5>
-                                        <p>
-                                            <span className="mr-1">
-                                                <strong>Chỉ từ 10tỷ</strong>
-                                            </span>
-                                        </p>
+                                    <div>
+                                        <div className="img-wrap">
+                                            <a href="#">
+                                                <img className="img-fluid" src={car3} />
+                                            </a>
+                                        </div>
+                                        <a
+                                            href={fintechUrl}
+                                            className="text-white go-to-fintech-btn"
+                                            target="_blank"
+                                            title="fintect-check"
+                                        >
+                                            Vay
+                                        </a>
+                                        <div className="text-center pt-4">
+                                            <h5>Siêu xe</h5>
+                                            <p>
+                                                <span className="mr-1">
+                                                    <strong>Chỉ từ 10tỷ</strong>
+                                                </span>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
