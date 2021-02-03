@@ -104,3 +104,9 @@ html body {
 .item-ht img {
     width: 200px;
 }
+
+.go-to-fintech-btn {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
