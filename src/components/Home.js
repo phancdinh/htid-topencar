@@ -134,6 +134,15 @@ export default function Home() {
                                     <a href="#">
                                         <img className="img-fluid" src={car1} />
                                     </a>
+                                    <a
+                                        href={fintechUrl}
+                                        className="text-white go-to-fintech-btn"
+                                        target="_blank"
+                                        title="fintect-check"
+                                    >
+                                        Vay
+                                    </a>
+
                                     <div className="text-center pt-4">
                                         <h5>Xe 5 chỗ</h5>
                                         <p>
@@ -147,6 +156,14 @@ export default function Home() {
                                     <a href="#">
                                         <img className="img-fluid" src={car1} />
                                     </a>
+                                    <a
+                                        href={fintechUrl}
+                                        className="text-white go-to-fintech-btn"
+                                        target="_blank"
+                                        title="fintect-check"
+                                    >
+                                        Vay
+                                    </a>
                                     <div className="text-center pt-4">
                                         <h5>Xe 7 chỗ</h5>
                                         <p>
@@ -159,6 +176,14 @@ export default function Home() {
                                 <div className="col-4 mb-5 item-ht">
                                     <a href="#">
                                         <img className="img-fluid" src={car1} />
+                                    </a>
+                                    <a
+                                        href={fintechUrl}
+                                        className="text-white go-to-fintech-btn"
+                                        target="_blank"
+                                        title="fintect-check"
+                                    >
+                                        Vay
                                     </a>
                                     <div className="text-center pt-4">
                                         <h5>Siêu xe</h5>
@@ -183,49 +208,6 @@ export default function Home() {
                     </button>
                 </>
             )}
-            <div className="container main-contain">
-                <div className="row">
-                    <div className="col-4 mb-5 item-ht">
-                        <a href="#">
-                            <img className="img-fluid" src={car1} />
-                        </a>
-                        <div className="text-center pt-4">
-                            <h5>Xe 5 chỗ</h5>
-                            <p>
-                                <span className="mr-1">
-                                    <strong>Chỉ từ 500 triệu</strong>
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-                    <div className="col-4 mb-5 item-ht">
-                        <a href="#">
-                            <img className="img-fluid" src={car1} />
-                        </a>
-                        <div className="text-center pt-4">
-                            <h5>Xe 7 chỗ</h5>
-                            <p>
-                                <span className="mr-1">
-                                    <strong>Chỉ từ 1,2 tỷ</strong>
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-                    <div className="col-4 mb-5 item-ht">
-                        <a href="#">
-                            <img className="img-fluid" src={car1} />
-                        </a>
-                        <div className="text-center pt-4">
-                            <h5>Siêu xe</h5>
-                            <p>
-                                <span className="mr-1">
-                                    <strong>Chỉ từ 10tỷ</strong>
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     );
 }
