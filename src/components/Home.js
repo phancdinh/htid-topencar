@@ -143,8 +143,6 @@ export default function Home() {
         dispatchLogout();
     }
 
-    const fintechUrl = `${CONFIG.AUTHORIZE_ENDPOINT}?response_type=${CONFIG.RESPONSE_TYPE}&scope=${CONFIG.SCOPE}&redirect_uri=${FINTECH_CONFIG.REDIRECT_URI}&client_id=${FINTECH_CONFIG.CLIENT_ID}`;
-
     const authenUser = AuthenUser(profile, handleLogoutBtnClick);
     const carContent = carList.map((car, index) => {
         return (
