@@ -8,17 +8,15 @@ import {
     getCodeVerifier,
     setCodeVerifier,
 } from "../actions/session";
-import { Link } from "react-router-dom";
 import getPKCE from "../actions/pkce";
 import { FINTECH_CONFIG, CONFIG } from "../config";
 import car1 from "../img/car1.jpg";
 import car2 from "../img/car2.jpg";
 import car3 from "../img/car3.jpg";
-import car4 from "../img/car4.jpg";
-import car5 from "../img/car5.jpg";
-import car6 from "../img/car6.jpg";
+import fin1 from "../img/icon-flash-blue.png";
+import fin2 from "../img/icon-flash-red.png";
 import AuthenUser from "./AuthenUser";
-
+import bg from "../img/car-detail.jpg";
 import { fetchUserProfile as fetchUserProfileApi, generateToken } from "../actions/profile";
 
 export const carList = [
@@ -34,24 +32,13 @@ export const carList = [
         id: 3,
         img: car3,
     },
-    {
-        id: 4,
-        img: car4,
-    },
-    {
-        id: 5,
-        img: car5,
-    },
-    {
-        id: 6,
-        img: car6,
-    },
 ];
 
-export default function Home() {
+export default function Car() {
     const pkcePair = useRef(getPKCE());
 
     const [profile, setProfile] = useState({});
+    const [showDialog, setShowDialog] = useState(false);
 
     const [state, setState] = useState({
         idToken: {},
@@ -143,30 +130,39 @@ export default function Home() {
         dispatchLogout();
     }
 
+    function closeDialog() {
+        setShowDialog(false);
+    }
+    function showDialogHandle() {
+        setTimeout(() => {
+            setShowDialog(true);
+        }, 5000);
+    }
+
     const fintechUrl = `${CONFIG.AUTHORIZE_ENDPOINT}?response_type=${CONFIG.RESPONSE_TYPE}&scope=${CONFIG.SCOPE}&redirect_uri=${FINTECH_CONFIG.REDIRECT_URI}&client_id=${FINTECH_CONFIG.CLIENT_ID}`;
 
     const authenUser = AuthenUser(profile, handleLogoutBtnClick);
-    const carContent = carList.map((car, index) => {
-        return (
-            <div className="col-4 item-ht">
-                <div>
-                    <div className="img-wrap">
-                        <Link to="/car">
-                            <img className="img-fluid" src={car.img} />
-                        </Link>
-                    </div>
-                </div>
-            </div>
-        );
-    });
+
     return (
-        <div className="home-container">
+        <div className="home-container car">
             {state.isLoggedIn ? (
                 <>
+                    <img src={bg} className="bg" alt="" />
                     {authenUser}
                     {profile && (
-                        <div className="container main-contain">
-                            <div className="row">{carContent}</div>
+                        <div className="container">
+                            <div className="click-to-show" onClick={showDialogHandle} />
+
+                            <a
+                                href={fintechUrl}
+                                id="go-to-fintech-btn"
+                                className={`${showDialog ? "show" : ""}`}
+                                target="_blank"
+                                title="fintech"
+                            >
+                                <img className="bottom" src={fin1} />
+                                <img className="top" src={fin2} />
+                            </a>
                         </div>
                     )}
                 </>
