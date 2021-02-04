@@ -163,7 +163,7 @@ export default function Home() {
                 <>
                     {authenUser}
                     {profile && (
-                        <div className="container main-contain">
+                        <div className="container main-content">
                             <div className="row">{carContent}</div>
                         </div>
                     )}
