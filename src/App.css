@@ -81,34 +81,44 @@ html body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url("img/logo.png");
-    width: 200px;
-    height: 156px;
+
+.btn-wrapper {
+    margin-top: 30px;
+    margin-right: 120px;
 }
 
-.profile-menu {
-    color: white;
+button.btn-common {
+    border: 0;
 }
 
+button.login {
+    background: url("./img/dang-nhap.jpg");
+    width: 201px;
+    height: 61px;
+}
+
+button.sign-up {
+    background: url("./img/dang-ky.jpg");
+    width: 201px;
+    height: 61px;
+}
 .main-contain {
-    margin-top: 330px;
+    margin-top: 120px;
 }
 
 .item-ht {
-    min-height: 400px;
-    text-align: center;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.4);
+    /*min-height: 300px;*/
+    /*text-align: center;*/
+    /*padding: 2rem;*/
+    /*background: rgba(255, 255, 255, 0.4);*/
+    /*color: white;*/
 }
+
 .item-ht > div {
-    border: 1px white solid;
 }
+
 .item-ht .img-wrap {
-    max-height: 300px;
+    height: 330px;
     width: 100%;
     text-align: center;
     display: flex;
@@ -116,13 +126,94 @@ html body {
     align-items: center;
 }
 
-.item-ht .img-wrap img {
-    /*width: 200px;*/
+.profile-menu {
+    color: #db5b07;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    right: 80px;
+    width: 600px;
+    height: 108px;
+    align-items: center;
+}
+
+.profile-menu a {
+    color: #db5b07;
+}
+
+.profile-menu img {
+    width: 45px;
+}
+
+.home-container.car img.bg {
+    width: calc(100vw - 15px);
+}
+
+.click-to-show {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    left: 0;
+}
+
+.success-show.show .modal {
+    display: block;
+}
+
+.success-show .modal .modal-dialog {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 500px;
     height: 300px;
 }
 
-.go-to-fintech-btn {
-    position: absolute;
+#go-to-fintech-btn {
+    position: fixed;
     right: 10px;
-    top: 20px;
+    bottom: 20px;
+    display: none;
+    width: 298px;
+    height: 297px;
+    cursor: pointer;
+}
+
+#go-to-fintech-btn.show {
+    display: block;
+}
+
+@keyframes cf3FadeInOut {
+    0% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0.5;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#go-to-fintech-btn img.top {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: alternate;
+}
+
+#go-to-fintech-btn img {
+    position: absolute;
+    left: 0;
 }
