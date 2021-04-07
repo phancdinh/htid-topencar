@@ -24,7 +24,8 @@ steps:
   inputs:
     command: 'custom'
     customCommand: 'run build --if-present'
-- task: Npm@1
+- task: PublishBuildArtifacts@1
   inputs:
-    command: 'custom'
-    customCommand: 'run start'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
