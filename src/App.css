@@ -1,0 +1,270 @@
+/**
+ * Copyright (c) 2019, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ *
+ * WSO2 Inc. licenses this file to you under the Apache License,
+ * Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 10vmin;
+    pointer-events: none;
+}
+
+.App-header {
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+}
+
+.home-container {
+    text-align: right;
+    /*padding: 20px 30px;*/
+}
+
+.token-request-block,
+.access-request-block {
+    text-align: left;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.wso2-logo-block .wso2-logo {
+    margin-top: 200px;
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+.wso2-logo-block .wso2-is-logo {
+    margin-right: 10px;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.ht-id,
+.welcome {
+    color: coral;
+}
+
+html body {
+    height: 100%;
+    background-image: url("img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn-wrapper {
+    margin-top: 30px;
+    margin-right: 120px;
+}
+
+button.btn-common {
+    border: 0;
+}
+
+button.login {
+    background: url("./img/dang-nhap.jpg");
+    width: 201px;
+    height: 61px;
+}
+
+button.sign-up {
+    background: url("./img/dang-ky.jpg");
+    width: 201px;
+    height: 61px;
+}
+.main-content {
+    margin-top: 120px;
+    z-index: 5;
+}
+
+.item-ht {
+    /*min-height: 300px;*/
+    /*text-align: center;*/
+    /*padding: 2rem;*/
+    /*background: rgba(255, 255, 255, 0.4);*/
+    /*color: white;*/
+}
+
+.item-ht > div {
+}
+
+.item-ht .img-wrap {
+    height: 330px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-menu {
+    color: #db5b07;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    right: 180px;
+    width: 600px;
+    height: 108px;
+    align-items: center;
+    z-index: 10;
+}
+
+.profile-menu a {
+    color: #db5b07;
+}
+
+.profile-menu img {
+    width: 45px;
+}
+
+.home-container.car img.bg {
+    width: calc(100vw - 15px);
+}
+
+.click-to-show {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    left: 0;
+}
+
+.success-show.show .modal {
+    display: block;
+}
+
+.success-show .modal .modal-dialog {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 500px;
+    height: 300px;
+}
+
+#go-to-fintech-btn {
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    display: none;
+    width: 298px;
+    height: 297px;
+    cursor: pointer;
+}
+
+#go-to-fintech-btn.show {
+    display: block;
+}
+
+@keyframes cf3FadeInOut {
+    0% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0.5;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#go-to-fintech-btn img.top {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: alternate;
+}
+
+#go-to-fintech-btn img {
+    position: absolute;
+    left: 0;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent !important;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-left: -110px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background: url("./img/logout.png");
+    width: 303px;
+    height: 126px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
