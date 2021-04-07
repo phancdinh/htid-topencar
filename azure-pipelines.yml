@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
+- azure
 
 pool:
   vmImage: ubuntu-latest
@@ -22,8 +22,9 @@ steps:
     command: 'install'
 - task: Npm@1
   inputs:
-    command: 'publish'
+    command: 'custom'
+    customCommand: 'run build --if-present'
 - task: Npm@1
   inputs:
     command: 'custom'
-    customCommand: 'start'
+    customCommand: 'run start'
