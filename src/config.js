@@ -11,7 +11,7 @@ export const CONFIG = {
     LOGOUT_URL: `${HOST}/oidc/logout`,
     RESPONSE_TYPE: "code",
     SCOPE: "openid profile phone",
-    REDIRECT_URI: "https://topen-car.herokuapp.com",
+    REDIRECT_URI: "https://topen-car.azurewebsites.net",
 
     // id of 'Demo - SPA' Service Provider
     CLIENT_ID: "djJZinXs_OeJ9j5R7ETec4KFLGMa",
@@ -23,7 +23,7 @@ export const CONFIG = {
     COOKIE_PATH: "/",
 
     // endpoint of User Profile service
-    PROFILE_SERVICE_URL: "https://profile-demo-ht.herokuapp.com",
+    PROFILE_SERVICE_URL: "https://profile-demo-ht.azurewebsites.net",
 
     APIM_URL: "http://api-profile-dev.hungthinhcorp.com.vn:8080",
     // consumer key of API subscription on devportal
@@ -33,7 +33,7 @@ export const CONFIG = {
 };
 
 export const FINTECH_CONFIG = {
-    REDIRECT_URI: "https://topen-fintech.herokuapp.com",
+    REDIRECT_URI: "https://topen-fintech.azurewebsites.net",
     CLIENT_ID: "BWIItvzyes_2FFnQCtQkjspAtvQa",
     CLIENT_SECRET: "E0jRK6tgeaRdbYMKc5oSUN7AtPYa",
 };
