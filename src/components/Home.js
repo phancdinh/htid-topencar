@@ -136,7 +136,7 @@ export default function Home() {
     }
 
     function handleSignUpBtnClick() {
-        window.open("https://app-profile-dev.hungthinhcorp.com.vn/account/register", "_blank");
+        window.open(CONFIG.REGISTER_URL, "_blank");
     }
 
     function handleLogoutBtnClick() {

@@ -21,6 +21,7 @@ export const CONFIG = {
     GRANT_TYPE: "authorization_code",
     CLIENT_URL: `https://localhost:8000`,
     COOKIE_PATH: "/",
+    REGISTER_URL: "https://profile-dev.hungthinhcorp.com.vn/account/register",
 
     // endpoint of User Profile service
     PROFILE_SERVICE_URL: "https://profile-demo-ht.azurewebsites.net",
