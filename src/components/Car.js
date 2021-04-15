@@ -145,7 +145,7 @@ export default function Car() {
 
     return (
         <div className="home-container car">
-            {state.isLoggedIn ? (
+            {state.isLoggedIn || true ? (
                 <>
                     <img src={bg} className="bg" alt="" />
                     {authenUser}

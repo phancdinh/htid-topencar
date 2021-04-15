@@ -159,7 +159,7 @@ export default function Home() {
     });
     return (
         <div className="home-container">
-            {state.isLoggedIn ? (
+            {state.isLoggedIn || true ? (
                 <>
                     {authenUser}
                     {profile && (
