@@ -10,7 +10,7 @@ import {
 } from "../actions/session";
 import { Link } from "react-router-dom";
 import getPKCE from "../actions/pkce";
-import { FINTECH_CONFIG, CONFIG } from "../config";
+import { CONFIG } from "../config";
 import car1 from "../img/car1.jpg";
 import car2 from "../img/car2.jpg";
 import car3 from "../img/car3.jpg";
@@ -159,7 +159,7 @@ export default function Home() {
     });
     return (
         <div className="home-container">
-            {state.isLoggedIn || true ? (
+            {state.isLoggedIn ? (
                 <>
                     {authenUser}
                     {profile && (
